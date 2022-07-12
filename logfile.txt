@@ -1,0 +1,54 @@
+[29-Oct-2021 03:02:49] Fase Extract dimulai
+[29-Oct-2021 03:02:49] Extract dari file character dan membuat file character.json
+[29-Oct-2021 03:03:01] Extract dari file location dan membuat file location.json
+[29-Oct-2021 03:03:03] Extract dari file episode dan membuat file episode.json
+[29-Oct-2021 03:03:04] Fase Extract selesai
+[29-Oct-2021 03:03:04] Fase Transform dimulai
+[29-Oct-2021 03:03:04] Hapus kolom url dari DataFrame Character
+[29-Oct-2021 03:03:04] Hapus kolom created dari DataFrame Character
+[29-Oct-2021 03:03:04] Hapus kolom url dari DataFrame Location
+[29-Oct-2021 03:03:04] Hapus kolom created dari DataFrame Location
+[29-Oct-2021 03:03:04] Hapus kolom url dari DataFrame Episode
+[29-Oct-2021 03:03:04] Hapus kolom created dari DataFrame Episode
+[29-Oct-2021 03:03:05] Mengganti nilai kosong menjadi np.nan pada DataFrame Character
+[29-Oct-2021 03:03:05] Mengganti nilai kosong menjadi np.nan pada DataFrame Location
+[29-Oct-2021 03:03:05] Mengganti nilai kosong menjadi np.nan pada DataFrame Episode
+[29-Oct-2021 03:03:05] Mengganti kolom [origin, location] menjadi kolom [origin_location, latest_location] pada DataFrame Character
+[29-Oct-2021 03:03:05] Mengganti kolom [episode] menjadi kolom [episode_code] pada DataFrame Episode
+[29-Oct-2021 03:03:05] Ubah dict pada kolom origin_location sehingga menjadi namenya saja
+[29-Oct-2021 03:03:05] Ubah dict pada kolom latest_location sehingga menjadi namenya saja
+[29-Oct-2021 03:03:05] Menambah kolom origin_dimension, origin_location_type, latest_dimension, latest_location_type pada DataFrame Character
+[29-Oct-2021 03:03:05] Menggabung DataFrame Character dan DataFrame Location
+[29-Oct-2021 03:03:05] Mengubah nilai kolom [origin_dimension, origin_location_type] pada DataFrame Character berdasarkan DataFrame Location
+[29-Oct-2021 03:03:05] Mengubah nilai kolom [latest_dimension, latest_location_type] pada DataFrame Character berdasarkan DataFrame Location
+[29-Oct-2021 03:03:06] Mengubah format air_date pada DataFrame Episode menjadi DD-Mon-YYYY
+[29-Oct-2021 03:03:06] Membuat Fact table bernama Appearance untuk DataFrame Episode dan DataFrame Character
+[29-Oct-2021 03:03:06] Menghapus tuple yang duplikat dari df_appearance
+[29-Oct-2021 03:03:06] Hapus kolom episode dari DataFrame Character
+[29-Oct-2021 03:03:06] Hapus kolom characters dari DataFrame Episode
+[29-Oct-2021 03:03:06] Mengganti nilai unknown menjadi np.nan pada DataFrame Character
+[29-Oct-2021 03:03:06] Mengganti nilai unknown menjadi np.nan pada DataFrame Episode
+[29-Oct-2021 03:03:06] Fase Transform selesai
+[29-Oct-2021 03:03:06] Fase Load dimulai
+[29-Oct-2021 03:03:06] Membuat Database RickAndMorty.db dan membuat koneksi ke SQLite
+[29-Oct-2021 03:03:06] Membuat tabel character
+[29-Oct-2021 03:03:06] Mengisi tabel character dari DataFrame Character
+[29-Oct-2021 03:03:06] Membuat tabel episode
+[29-Oct-2021 03:03:06] Mengisi tabel episode dari DataFrame Episode
+[29-Oct-2021 03:03:06] Membuat tabel appearance
+[29-Oct-2021 03:03:06] Mengisi tabel appearance dari DataFrame Appearance
+[29-Oct-2021 03:03:06] Database berhasil dibuat
+[29-Oct-2021 03:03:06] Fase Load selesai
+[29-Oct-2021 03:03:06] Melakukan Query Insert
+[29-Oct-2021 03:03:06] Menambahkan 3 baris pada tabel character
+[29-Oct-2021 03:03:06] Menambahkan 3 baris pada tabel episode
+[29-Oct-2021 03:03:06] Menambahkan 3 baris pada tabel appearance
+[29-Oct-2021 03:03:06] Melakukan Query Update
+[29-Oct-2021 03:03:06] Mengupdate 3 baris terakhir pada tabel character
+[29-Oct-2021 03:03:06] Mengupdate 3 baris terakhir pada tabel episode
+[29-Oct-2021 03:03:07] Mengupdate 3 baris terakhir pada tabel appearance
+[29-Oct-2021 03:03:07] Melakukan Query Delete
+[29-Oct-2021 03:03:07] Menghapus 3 baris terakhir pada tabel appearance
+[29-Oct-2021 03:03:07] Menghapus 3 baris terakhir pada tabel episode
+[29-Oct-2021 03:03:07] Menghapus 3 baris terakhir pada tabel character
+[29-Oct-2021 03:03:07] Melakukan Query Count

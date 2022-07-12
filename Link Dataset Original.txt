@@ -1,0 +1,8 @@
+Data Character
+https://rickandmortyapi.com/api/character
+
+Data Location
+https://rickandmortyapi.com/api/location
+
+Data Episode
+https://rickandmortyapi.com/api/episode
